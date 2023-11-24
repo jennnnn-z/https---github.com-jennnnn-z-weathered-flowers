@@ -1,4 +1,34 @@
-#include <hp_BH1750.h>
+/*
+Project title: Weathered flowers
+Description: Takes in the values of wind, temperature, and light and plays music 
+based on the values, uses: 
+Light sensor: Adafruit VEML7700
+Music player: Adafruit VS1053
+Wind sensor: Modern Device Wind Sensor Rev. P 
+
+Credit: Example files from Adafruit and Modern Device for each of the sensors
+Track001 = 
+"Almost Bliss" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+Track002 = 
+"Sincerely" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+Track003 = 
+"Ultralounge" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+Track004 = 
+"Blippy Trance" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+*/
+
+
 #include "Adafruit_VEML7700.h"
 #include <SPI.h>
 #include <Adafruit_VS1053.h>
@@ -65,7 +95,7 @@ void setup() {
   }
   Serial.println(F("VS1053 found"));
   
-   if (!SD.begin(CARDCS)) {
+  if (!SD.begin(CARDCS)) {
     Serial.println(F("SD failed, or not present"));
     while (1);  // don't do anything more
   }
